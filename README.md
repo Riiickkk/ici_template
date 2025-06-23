@@ -1,14 +1,10 @@
-# ici_template [This section can be removed in the submission version]
-This GitHub repository offers a template specifically designed to teach students how to write effective README.md files and create a well-organized file structure. The template provides clear instructions and examples, helping students to learn the basics of GitHub and how to create professional-looking repositories.
-
-
 # Project Title
 
 Talk-To-Cashier
 
 ## Project Description
 
-[Enter a brief description of your project, including the data you used and the analytical methods you applied. Be sure to provide context for your project and explain why it is important.]
+This project is an AI cashier that helps the customers order their beverages at drink shops. We aim to let the AI cashier be capable of interacting with customers by receiving and processing verbal orders through speech recognition technology, accurately calculates the total amount based on the selected items and facilitates the checkout process using integrated payment functions. By replicating the core functions of a human cashier—including listening, calculating, and processing transactions—the AI cashier enhances efficiency, reduces labor demands, and ensures a smooth and consistent customer experience.
 
 ## Getting Started
 
