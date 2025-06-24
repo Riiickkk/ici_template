@@ -14,7 +14,7 @@ During development, we encountered several challenges, including training and de
 
 Looking forward, in response to an increasingly globalized society, we aim to expand the system’s multilingual support, incorporate more diverse ordering scenarios (e.g., dine-in vs. takeout options), further enhance the AI's semantic understanding and recommendation capabilities, and explore the feasibility of integration with more chain stores.
 
-## Getting Started
+## How to Install and Run the Project
 
 [Provide instructions on how to get started with your project, including any necessary software or data. Include installation instructions and any prerequisites or dependencies that are required.]
 
