@@ -22,9 +22,21 @@ This project is an AI cashier that helps the customers order their beverages at 
 
 [Provide a summary of your findings and conclusions, including any recommendations or implications for future research. Be sure to explain how your results address your research question or problem statement.]
 
-## Contributors
+## Include Credits
+This project was collaboratively completed by the following team members. We sincerely appreciate everyone’s dedication and contribution:
 
-[List the contributors to your project and describe their roles and responsibilities.]
+Hsin-Kai Hsu (Kevin)
+Yan-Ray Liu (Rick)
+Shih-Yi Wang (Chloe)
+Ching-Fu Yang (Leo)
+Hsu-He Chiu (Robert)
+We would like to express our special thanks to Professor Pien Chung-pei of National Chengchi University for her professional guidance and valuable teaching throughout the Introduction to AI course.
+
+During the design and implementation of this project, we referred to the following course modules as technical and conceptual foundations:
+
+AIGC and ChatGPT’s Advanced Application: Fine-tune
+AIGC and ChatGPT’s Advanced Application: RAG
+These resources significantly deepened our understanding of generative AI, including model fine-tuning and retrieval-augmented generation (RAG), and contributed greatly to the realization of this project.
 
 ## Acknowledgments
 
