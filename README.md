@@ -25,11 +25,11 @@ This project is an AI cashier that helps the customers order their beverages at 
 ## Include Credits
 This project was collaboratively completed by the following team members. We sincerely appreciate everyone’s dedication and contribution:
 
-Hsin-Kai Hsu (Kevin)
-Yan-Ray Liu (Rick)
-Shih-Yi Wang (Chloe)
-Ching-Fu Yang (Leo)
-Hsu-He Chiu (Robert)
+Hsin-Kai Hsu (Kevin),
+Yan-Ray Liu (Rick),
+Shih-Yi Wang (Chloe),
+Ching-Fu Yang (Leo),
+Hsu-He Chiu (Robert).
 We would like to express our special thanks to Professor Pien Chung-pei of National Chengchi University for his professional guidance and valuable teaching throughout the Introduction to AI course.
 
 During the design and implementation of this project, we referred to the following course modules as technical and conceptual foundations:
