@@ -4,7 +4,15 @@ Talk-To-Cashier
 
 ## Project Description
 
-This project is an AI cashier that helps the customers order their beverages at drink shops. We aim to let the AI cashier be capable of interacting with customers by receiving and processing verbal orders through speech recognition technology, accurately calculates the total amount based on the selected items and facilitates the checkout process using integrated payment functions. By replicating the core functions of a human cashier—including listening, calculating, and processing transactions—the AI cashier enhances efficiency, reduces labor demands, and ensures a smooth and consistent customer experience.
+The project Talk-to-Cashier aims to develop an AI-powered virtual cashier system designed to assist customers in ordering beverages at drink shops. The motivation behind this project stems from four common issues observed in traditional human-operated ordering and cashier processes: excessive workload on cashiers during peak hours, potential hygiene concerns when staff are required to handle both cashiering and drink preparation simultaneously, a high rate of human error, and a heavy dependence on manual labor in existing ordering systems.
+
+By integrating speech recognition, natural language processing, and Retrieval-Augmented Generation (RAG) technologies, we built an AI cashier system capable of natural conversational interaction. The objective is to enable the AI cashier to receive and process verbal orders through speech recognition, accurately calculate the total amount based on selected items, and facilitate the checkout process via integrated payment functionalities. This approach aims to reduce labor demands, improve operational efficiency, and ensure a smooth and consistent customer experience.
+
+For model training and testing, we selected the beverage brand “Déjà Vu” (得正) as our data source. The primary reason for choosing this brand lies in its relatively streamlined menu, which facilitates efficient and precise model training within the constraints of our limited resources and technical capacity, while also allowing us to focus on optimizing semantic understanding and menu structuring.
+
+During development, we encountered several challenges, including training and deploying the RAG model in real-time interactive settings, building a structured menu database, and addressing information loss due to errors in speech recognition. We also placed particular emphasis on interface optimization and designed a voice-based interaction interface to enhance the system’s user-friendliness.
+
+Looking forward, in response to an increasingly globalized society, we aim to expand the system’s multilingual support, incorporate more diverse ordering scenarios (e.g., dine-in vs. takeout options), further enhance the AI's semantic understanding and recommendation capabilities, and explore the feasibility of integration with more chain stores.
 
 ## Getting Started
 
