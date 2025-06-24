@@ -34,7 +34,7 @@ We would like to express our special thanks to Professor Pien Chung-pei of Natio
 
 During the design and implementation of this project, we referred to the following course modules as technical and conceptual foundations:
 AIGC and ChatGPT’s Advanced Application: Fine-tune,
-AIGC and ChatGPT’s Advanced Application: RAG
+AIGC and ChatGPT’s Advanced Application: RAG.
 These resources significantly deepened our understanding of generative AI, including model fine-tuning and retrieval-augmented generation (RAG), and contributed greatly to the realization of this project.
 
 ## Acknowledgments
