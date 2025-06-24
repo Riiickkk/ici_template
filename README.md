@@ -30,7 +30,7 @@ Yan-Ray Liu (Rick)
 Shih-Yi Wang (Chloe)
 Ching-Fu Yang (Leo)
 Hsu-He Chiu (Robert)
-We would like to express our special thanks to Professor Pien Chung-pei of National Chengchi University for her professional guidance and valuable teaching throughout the Introduction to AI course.
+We would like to express our special thanks to Professor Pien Chung-pei of National Chengchi University for his professional guidance and valuable teaching throughout the Introduction to AI course.
 
 During the design and implementation of this project, we referred to the following course modules as technical and conceptual foundations:
 
