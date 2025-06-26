@@ -71,9 +71,14 @@ IN THE SOFTWARE.
 ## References
 
 [List any references or resources that you used during your project, including data sources, analytical methods, and tools.]
+Drink menu data was sourced from the official Facebook post by DeZheng OOLONG TEA PROJECT:
+Menu 2025 - Facebook
+This information was used solely for academic and experimental purposes.
 
-The drink menu and product information used in this project were sourced from DeZheng OOLONG TEA PROJECT's official Facebook post:
-菜單 Menu 2025. 
-The data was used solely for academic and experimental purposes.
+Large language model integration was powered by OpenAI's GPT-4o API and the LangChain framework.
 
-All AI model training and interactions were conducted in a non-commercial, educational setting as part of the Introduction to AI course at National Chengchi University.
+Document loading and vector search were implemented using langchain-community loaders and Chroma vector database.
+
+Audio transcription was handled using OpenAI Whisper; text-to-speech (TTS) was implemented using gTTS (Google Text-to-Speech).
+
+All training, implementation, and testing were conducted in a non-commercial, educational setting as part of the Introduction to AI course at National Chengchi University.
