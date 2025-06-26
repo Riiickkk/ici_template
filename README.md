@@ -71,7 +71,7 @@ IN THE SOFTWARE.
 ## References
 
 Drink menu data was sourced from the official Facebook post by DeZheng OOLONG TEA PROJECT:
-Menu 2025 - Facebook
+Menu 2025 - Facebook. 
 This information was used solely for academic and experimental purposes.
 
 Large language model integration was powered by OpenAI's GPT-4o API and the LangChain framework.
