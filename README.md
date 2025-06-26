@@ -70,7 +70,6 @@ IN THE SOFTWARE.
 
 ## References
 
-[List any references or resources that you used during your project, including data sources, analytical methods, and tools.]
 Drink menu data was sourced from the official Facebook post by DeZheng OOLONG TEA PROJECT:
 Menu 2025 - Facebook
 This information was used solely for academic and experimental purposes.
