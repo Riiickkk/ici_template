@@ -71,7 +71,9 @@ IN THE SOFTWARE.
 ## References
 
 [List any references or resources that you used during your project, including data sources, analytical methods, and tools.]
+
 The drink menu and product information used in this project were sourced from DeZheng OOLONG TEA PROJECT's official Facebook post:
-菜單 Menu 2025
+菜單 Menu 2025. 
 The data was used solely for academic and experimental purposes.
+
 All AI model training and interactions were conducted in a non-commercial, educational setting as part of the Introduction to AI course at National Chengchi University.
