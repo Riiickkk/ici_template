@@ -1,0 +1,16 @@
+numpy
+pandas
+matplotlib
+ipython
+langchain
+langchain-openai
+langchain-community
+langchain-core
+chromadb
+pypdf
+gradio
+openai-whisper
+gtts
+openai
+langdetect
+click==8.1.3
