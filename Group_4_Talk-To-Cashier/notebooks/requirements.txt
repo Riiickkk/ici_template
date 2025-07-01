@@ -8,9 +8,11 @@ langchain-community
 langchain-core
 chromadb
 pypdf
-gradio
 openai-whisper
 gtts
 openai
 langdetect
 click==8.1.3
+gradio==4.38.1
+gradio_client==0.16.1
+pydantic==2.8.2

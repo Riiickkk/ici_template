@@ -9,7 +9,41 @@ class LLMService:
         self.retriever = retriever
         self.model = ChatOpenAI(model_name="gpt-4o", temperature=0, openai_api_key=OPENAI_API_KEY)
         self.output_parser = StrOutputParser()
-        self.client = OpenAI(api_key=OPENAI_API_KEY) # 用於校正提示
+        self.client = OpenAI(api_key=OPENAI_API_KEY) # 用於校正提示和翻譯
+
+    def translate_to_chinese(self, text: str, source_lang: str) -> str:
+        """
+        將輸入文本翻譯成繁體中文。
+        Args:
+            text (str): 待翻譯的文本。
+            source_lang (str): 原始語言代碼 (e.g., 'en', 'ko', 'zh')。
+        Returns:
+            str: 翻譯後的繁體中文文本。
+        """
+        # 翻譯提示，明確指示翻譯成繁體中文
+        translation_prompt = f"""請將以下文本翻譯成繁體中文。
+        原始語言：{source_lang}
+        文本："{text}"
+
+        請只輸出翻譯後的繁體中文文本，不要有任何額外的解釋或贅述。
+        """
+        try:
+            response = self.client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {"role": "system", "content": "你是一個專業的翻譯助手，專門將各種語言翻譯成繁體中文。"},
+                    {"role": "user", "content": translation_prompt}
+                ],
+                temperature=0.1, # 翻譯任務通常使用較低的溫度
+                max_tokens=200
+            )
+            translated_text = response.choices[0].message.content.strip()
+            print(f"DEBUG (LLMService): Translated '{text}' from {source_lang} to Chinese: '{translated_text}'")
+            return translated_text
+        except Exception as e:
+            print(f"⚠️ 翻譯錯誤：{e}")
+            # 如果翻譯失敗，回傳原始文本，讓後續流程至少能繼續
+            return text
 
     def get_rag_context(self, query):
         """根據查詢檢索相關文件。"""
