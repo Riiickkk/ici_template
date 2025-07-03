@@ -16,7 +16,8 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 
 ## How to Install and Run the Project
 
-[Provide instructions on how to get started with your project, including any necessary software or data. Include installation instructions and any prerequisites or dependencies that are required.]
+> The following instructions target **Windows 10/11 + Miniconda** because that is where most user mistakes occur.  
+> macOS / Linux users can follow the **same steps**—just replace the installer, paths, and shell syntax that differ on your platform.
 
 ## File Structure
 
