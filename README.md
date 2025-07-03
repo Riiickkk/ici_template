@@ -19,6 +19,17 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 > The following instructions target **Windows 10/11 + Miniconda** because that is where most user mistakes occur.  
 > macOS / Linux users can follow the **same steps**—just replace the installer, paths, and shell syntax that differ on your platform.
 
+> ### 0. Prerequisites
+
+| Item                | Get it here                                                     | Notes                                                             |
+|---------------------|-----------------------------------------------------------------|-------------------------------------------------------------------|
+| Miniconda (≈ 60 MB) | <https://docs.anaconda.com/free/miniconda/index.html>           | Install in a **pure-English path** such as `C:\Miniconda3`.       |
+| Git                 | <https://git-scm.com/downloads>                                | For `git clone` (you can also download ZIP manually).             |
+| OpenAI API Key      | <https://platform.openai.com/account/api-keys>                 | Make sure the key is **active** and your account still has credits.|
+
+> **Why pure-English paths?**  
+> Non-ASCII folders like `桌面` or OneDrive sync paths frequently cause path-encoding or permission errors on Windows.
+
 ## File Structure
 
 [Describe the file structure of your project, including how the files are organized and what each file contains. Be sure to explain the purpose of each file and how they are related to one another.]
