@@ -169,6 +169,7 @@ ici_template/
     │   └── .env.example          # Sample env-var file (copy → .env, add OPENAI_API_KEY)
     │
     └── README.md                 # ← Top-level project guide
+
 undefined
 
 ### Module Responsibilities & Dependencies
