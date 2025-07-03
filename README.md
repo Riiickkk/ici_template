@@ -181,8 +181,8 @@ ici_template/
 | **`llm_service.py`**       | Combine *question + context* → OpenAI Chat API → return answer                               | Called by `main.py`             |
 | **`data/`**                | Holds the `.csv` / `.pdf` knowledge-base files                                               | Loaded at startup               |
 | **`requirements.txt`**     | Python dependency list (`pip install -r`)                                                    | —                               |
-| **`.env.example`**         | Example env-var file; copy to `.env` or set as a system environment variable                 | —                               |
-undefined
+| **`.env.example`** | Example env-var file; copy to `.env` or set as system environment variable | — |
+
 
 ## Analysis
 
