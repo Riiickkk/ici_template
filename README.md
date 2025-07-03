@@ -49,6 +49,7 @@ You should see `main.py`, `requirements.txt`, etc. in this folder.
 ### 3. Create + activate the Conda environment
 
 conda create -n cashier_env python=3.9 -y
+
 conda activate cashier_env
 
 The prompt prefix should now read `(cashier_env)`.
