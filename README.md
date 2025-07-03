@@ -175,7 +175,7 @@ ici_template/
 
 | File / Dir                  | Purpose                                                                                     | Consumed / Called by            |
 |-----------------------------|---------------------------------------------------------------------------------------------|---------------------------------|
-| **`main.py`**              | 1️⃣ Load vector DB&nbsp;·&nbsp;2️⃣ Start Gradio UI&nbsp;·&nbsp;3️⃣ Orchestrate the three services | imports the `*_service.py` files|
+| **`main.py`**              | 1️. Load vector DB&nbsp;·&nbsp;2️. Start Gradio UI&nbsp;·&nbsp;3️. Orchestrate the three services | imports the `*_service.py` files|
 | **`audio_service.py`**     | Record microphone audio → `ffmpeg` → Whisper speech-to-text                                  | Returns text to `llm_service.py`|
 | **`vector_db_service.py`** | Read **data/** → split → embed → store vectors; provides semantic search                     | Called by `llm_service.py`      |
 | **`llm_service.py`**       | Combine *question + context* → OpenAI Chat API → return answer                               | Called by `main.py`             |
