@@ -80,9 +80,9 @@ pip install -r requirements.txt
 $env:OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 > **Top 3 mistakes**  
-> ① wrapping the key in quotes *inside* the env-var dialog → authentication fails  
-> ② leaving a space before/after the key → authentication fails  
-> ③ using `set` in PowerShell (that’s CMD syntax) → variable isn’t exported
+> 1. wrapping the key in quotes *inside* the env-var dialog → authentication fails  
+> 2. leaving a space before/after the key → authentication fails  
+> 3. using `set` in PowerShell (that’s CMD syntax) → variable isn’t exported
 
 ---
 
