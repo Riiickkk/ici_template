@@ -90,7 +90,9 @@ $env:OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 python main.py
 
 Successful startup prints e.g.:
+
 Running on local URL: http://127.0.0.1:7860
+
 Running on public URL: https://abcd1234ef56.gradio.live
 
 1. Open **http://127.0.0.1:7860** in your browser.  
