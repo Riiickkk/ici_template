@@ -150,7 +150,69 @@ You’re all set — enjoy talking to your cashier bot! If you hit an unlisted i
 
 ## File Structure
 
-[Describe the file structure of your project, including how the files are organized and what each file contains. Be sure to explain the purpose of each file and how they are related to one another.]
+> Below is a high-level view of the folders and key files you need to know.  
+> Generic items such as `.gitignore`, licence files, screenshots, etc. are omitted for brevity.
+>
+> ici_template/
+│
+└── Group_4_Talk-To-Cashier/
+│
+├── data/ # <- Knowledge base (structured + docs)
+│ ├── cashier.csv # - SOP / FAQ for cashiers
+│ └── menu.pdf # - Restaurant menu for menu-related Q&A
+│
+├── notebooks/ # <- ALL source code lives here
+│ │
+│ ├── main.py # ENTRY POINT – wires up every service & launches Gradio
+│ │
+│ ├── audio_service.py # Records mic, calls Whisper to transcribe
+│ │
+│ ├── llm_service.py # Packs user text + context, calls OpenAI Chat API
+│ │
+│ ├── vector_db_service.py # Builds / queries ChromaDB
+│ │ # 1. reads data/ files
+│ │ # 2. splits → embeds → stores vectors
+│ │ # 3. returns top-k context for a query
+│ │
+│ ├── requirements.txt # Python dependency lock-file (pip install -r)
+│ │
+│ ├── .env.example # Sample env-var file (copy ⇒ .env, add OPENAI_API_KEY)
+│ │
+│ └── README.md # (optional) local notebook-level notes
+│
+└── README.md # YOU ARE HERE – top-level project guide
+
+### Module Responsibilities & Dependencies
+
+| Module / Dir            | Purpose                                                    | Depends on / Used by      |
+|-------------------------|------------------------------------------------------------|---------------------------|
+| **`main.py`**           | 1. Load vector DB<br>2. Spin up Gradio UI<br>3. Orchestrate I/O | imports `*_service.py`    |
+| **`audio_service.py`**  | Mic recording → `ffmpeg` → Whisper STT                    | returns text to LLM svc   |
+| **`vector_db_service.py`** | Build / query ChromaDB<br>feeds context chunks to LLM   | called by `llm_service.py`|
+| **`llm_service.py`**    | Combine **question + context** → OpenAI Chat → answer      | called by `main.py`       |
+| **`data/`**             | CSV + PDF knowledge base                                   | loaded at startup         |
+| **`requirements.txt`**  | All Python deps                                            | `pip install -r`          |
+| **`.env.example`**      | Env-var template                                           | copy to `.env` or set system var |
+
+### Execution Flow
+
+python main.py
+│
+├─► vector_db_service.py (load & embed data/)
+│
+┌─────┴────┐ user interacts via Gradio
+│ audio? │
+└──┬───┬───┘
+│ │ text input
+│ └► llm_service.py
+│ ├─► vector_db_service.py (retrieve context)
+│ └─► OpenAI Chat API
+│
+└► audio_service.py (record + whisper → text) ──► llm_service.py
+
+
+The structure keeps **recording → vector search → LLM reply** modular, so you can easily swap in new LLMs, add more data formats, or plug in an external database later.
+
 
 ## Analysis
 
