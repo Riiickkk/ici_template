@@ -150,10 +150,10 @@ You’re all set — enjoy talking to your cashier bot! If you hit an unlisted i
 
 ## File Structure
 
-> Below is a high-level view of the folders and key files you need to know.  
-> Generic items such as `.gitignore`, licence files, screenshots, etc. are omitted for brevity.
+> A concise overview of the key folders and files used at runtime.  
+> Generic items such as `.gitignore`, licence files, and screenshots are omitted for clarity.
 
-```text
+```
 ici_template/
 └── Group_4_Talk-To-Cashier/
     ├── data/                     # ← Knowledge base (structured + docs)
@@ -161,7 +161,7 @@ ici_template/
     │   └── menu.pdf              #   Restaurant menu used for Q&A
     │
     ├── notebooks/                # ← All source code lives here
-    │   ├── main.py               # Entry point; wires up every service & launches Gradio
+    │   ├── main.py               # Entry point; launches Gradio UI
     │   ├── audio_service.py      # Records mic, calls Whisper STT
     │   ├── llm_service.py        # Packs user text + context, calls OpenAI Chat API
     │   ├── vector_db_service.py  # Builds / queries ChromaDB
@@ -169,40 +169,20 @@ ici_template/
     │   └── .env.example          # Sample env-var file (copy → .env, add OPENAI_API_KEY)
     │
     └── README.md                 # ← Top-level project guide
-
-undefined
+```
 
 ### Module Responsibilities & Dependencies
 
-| Module / Dir            | Purpose                                                    | Depends on / Used by      |
-|-------------------------|------------------------------------------------------------|---------------------------|
-| **`main.py`**           | 1. Load vector DB<br>2. Spin up Gradio UI<br>3. Orchestrate I/O | imports `*_service.py`    |
-| **`audio_service.py`**  | Mic recording → `ffmpeg` → Whisper STT                    | returns text to LLM svc   |
-| **`vector_db_service.py`** | Build / query ChromaDB<br>feeds context chunks to LLM   | called by `llm_service.py`|
-| **`llm_service.py`**    | Combine **question + context** → OpenAI Chat → answer      | called by `main.py`       |
-| **`data/`**             | CSV + PDF knowledge base                                   | loaded at startup         |
-| **`requirements.txt`**  | All Python deps                                            | `pip install -r`          |
-| **`.env.example`**      | Env-var template                                           | copy to `.env` or set system var |
-
-### Execution Flow
-
-python main.py
-│
-├─► vector_db_service.py (load & embed data/)
-│
-┌─────┴────┐ user interacts via Gradio
-│ audio? │
-└──┬───┬───┘
-│ │ text input
-│ └► llm_service.py
-│ ├─► vector_db_service.py (retrieve context)
-│ └─► OpenAI Chat API
-│
-└► audio_service.py (record + whisper → text) ──► llm_service.py
-
-
-The structure keeps **recording → vector search → LLM reply** modular, so you can easily swap in new LLMs, add more data formats, or plug in an external database later.
-
+| File / Dir                  | Purpose                                                                                     | Consumed / Called by            |
+|-----------------------------|---------------------------------------------------------------------------------------------|---------------------------------|
+| **`main.py`**              | 1️⃣ Load vector DB&nbsp;·&nbsp;2️⃣ Start Gradio UI&nbsp;·&nbsp;3️⃣ Orchestrate the three services | imports the `*_service.py` files|
+| **`audio_service.py`**     | Record microphone audio → `ffmpeg` → Whisper speech-to-text                                  | Returns text to `llm_service.py`|
+| **`vector_db_service.py`** | Read **data/** → split → embed → store vectors; provides semantic search                     | Called by `llm_service.py`      |
+| **`llm_service.py`**       | Combine *question + context* → OpenAI Chat API → return answer                               | Called by `main.py`             |
+| **`data/`**                | Holds the `.csv` / `.pdf` knowledge-base files                                               | Loaded at startup               |
+| **`requirements.txt`**     | Python dependency list (`pip install -r`)                                                    | —                               |
+| **`.env.example`**         | Example env-var file; copy to `.env` or set as a system environment variable                 | —                               |
+```
 
 ## Analysis
 
