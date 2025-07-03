@@ -19,7 +19,9 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 > The following instructions target **Windows 10/11 + Miniconda** because that is where most user mistakes occur.  
 > macOS / Linux users can follow the **same steps**—just replace the installer, paths, and shell syntax that differ on your platform.
 
-> ### 0. Prerequisites
+---
+
+### 0. Prerequisites
 
 | Item                | Get it here                                                     | Notes                                                             |
 |---------------------|-----------------------------------------------------------------|-------------------------------------------------------------------|
@@ -29,6 +31,11 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 
 > **Why pure-English paths?**  
 > Non-ASCII folders like `桌面` or OneDrive sync paths frequently cause path-encoding or permission errors on Windows.
+
+---
+
+### 1. Clone the repository
+
 
 ## File Structure
 
