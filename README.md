@@ -35,7 +35,108 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 ---
 
 ### 1. Clone the repository
+git clone https://github.com/Riiickkk/ici_template.git
 
+---
+
+### 2. Open *Anaconda Prompt* and enter the correct sub-directory
+cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
+
+You should see `main.py`, `requirements.txt`, etc. in this folder.
+
+---
+
+### 3. Create + activate the Conda environment
+
+conda create -n cashier_env python=3.9 -y
+conda activate cashier_env
+
+The prompt prefix should now read `(cashier_env)`.
+
+---
+
+### 4. Install dependencies
+pip install -r requirements.txt
+
+> **Common pitfall** Forgetting FFmpeg causes  
+> `FileNotFoundError: [WinError 2] The system cannot find the file specified`  
+> when recording audio.
+
+---
+
+### 5. Set your OpenAI API key
+
+#### 5.1 Recommended — set a **permanent** user variable
+
+1. Search *Edit the system environment variables* → click **Environment Variables…**  
+2. Under “User variables” click **New…**  
+   * **Variable name:** `OPENAI_API_KEY`  
+   * **Variable value:** `sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx`  
+     *No quotes, no trailing spaces.*
+3. Click **OK** all the way out, then **close and reopen** Anaconda Prompt.
+
+#### 5.2 Temporary — set for the current terminal only
+$env:OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+> **Top 3 mistakes**  
+> ① wrapping the key in quotes *inside* the env-var dialog → authentication fails  
+> ② leaving a space before/after the key → authentication fails  
+> ③ using `set` in PowerShell (that’s CMD syntax) → variable isn’t exported
+
+---
+
+### 6. Run the app
+python main.py
+
+Successful startup prints e.g.:
+Running on local URL: http://127.0.0.1:7860
+Running on public URL: https://abcd1234ef56.gradio.live
+
+1. Open **http://127.0.0.1:7860** in your browser.  
+2. **Keep** the Anaconda Prompt window open – it’s your server.  
+3. The public URL is for quick external demos (expires in ~72 h).
+
+---
+
+### 7. Quick-start script (copy-paste)
+:: One-time setup
+conda create -n cashier_env python=3.9 -y
+conda activate cashier_env
+pip install -r requirements.txt
+conda install -c conda-forge ffmpeg -y
+
+:: Daily usage
+conda activate cashier_env
+cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
+python main.py
+
+---
+
+### 8. Troubleshooting Table
+
+| Message / Symptom                                            | Likely Cause                                    | Fix |
+|--------------------------------------------------------------|-------------------------------------------------|-----|
+| `The api_key client option must be set…`                     | `OPENAI_API_KEY` missing / misspelled           | Re-set env-var, restart terminal |
+| `FileNotFoundError: [WinError 2]` when recording             | FFmpeg not installed / not in PATH              | `conda install -c conda-forge ffmpeg -y` |
+| `OMP: Error #15: Initializing libiomp5md.dll…`               | Intel OpenMP DLL conflict                       | `setx KMP_DUPLICATE_LIB_OK True` or set in code |
+| Gradio shows **Connection errored out.** after recording     | Old Gradio / gradio_client bug                  | `pip install -U gradio gradio_client` |
+| Using `set OPENAI_API_KEY=` in PowerShell has no effect      | CMD syntax in PowerShell                        | Use `$env:OPENAI_API_KEY="..."` |
+
+---
+
+### 9. Safety notes
+
+* **Never** commit your API key to GitHub.  
+* Consider adding `.env` to `.gitignore` if you use dot-env files.  
+* Monitor your [OpenAI usage dashboard](https://platform.openai.com/account/usage) to avoid unexpected charges.
+
+---
+
+You’re all set — enjoy talking to your cashier bot! If you hit an unlisted issue, open an **Issue** with:
+
+1. Full terminal error log  
+2. OS + Python + Conda versions  
+3. Exact steps to reproduce
 
 ## File Structure
 
