@@ -152,8 +152,8 @@ You’re all set — enjoy talking to your cashier bot! If you hit an unlisted i
 
 > Below is a high-level view of the folders and key files you need to know.  
 > Generic items such as `.gitignore`, licence files, screenshots, etc. are omitted for brevity.
->
-> ici_template/
+
+ici_template/
 │
 └── Group_4_Talk-To-Cashier/
 │
