@@ -153,34 +153,22 @@ You’re all set — enjoy talking to your cashier bot! If you hit an unlisted i
 > Below is a high-level view of the folders and key files you need to know.  
 > Generic items such as `.gitignore`, licence files, screenshots, etc. are omitted for brevity.
 
+```text
 ici_template/
-│
 └── Group_4_Talk-To-Cashier/
-│
-├── data/ # <- Knowledge base (structured + docs)
-│ ├── cashier.csv # - SOP / FAQ for cashiers
-│ └── menu.pdf # - Restaurant menu for menu-related Q&A
-│
-├── notebooks/ # <- ALL source code lives here
-│ │
-│ ├── main.py # ENTRY POINT – wires up every service & launches Gradio
-│ │
-│ ├── audio_service.py # Records mic, calls Whisper to transcribe
-│ │
-│ ├── llm_service.py # Packs user text + context, calls OpenAI Chat API
-│ │
-│ ├── vector_db_service.py # Builds / queries ChromaDB
-│ │ # 1. reads data/ files
-│ │ # 2. splits → embeds → stores vectors
-│ │ # 3. returns top-k context for a query
-│ │
-│ ├── requirements.txt # Python dependency lock-file (pip install -r)
-│ │
-│ ├── .env.example # Sample env-var file (copy ⇒ .env, add OPENAI_API_KEY)
-│ │
-│ └── README.md # (optional) local notebook-level notes
-│
-└── README.md # YOU ARE HERE – top-level project guide
+    ├── data/                     # ← Knowledge base (structured + docs)
+    │   ├── cashier.csv           #   SOP / FAQ for cashiers
+    │   └── menu.pdf              #   Restaurant menu used for Q&A
+    │
+    ├── notebooks/                # ← All source code lives here
+    │   ├── main.py               # Entry point; wires up every service & launches Gradio
+    │   ├── audio_service.py      # Records mic, calls Whisper STT
+    │   ├── llm_service.py        # Packs user text + context, calls OpenAI Chat API
+    │   ├── vector_db_service.py  # Builds / queries ChromaDB
+    │   ├── requirements.txt      # Python dependency list (pip install -r)
+    │   └── .env.example          # Sample env-var file (copy → .env, add OPENAI_API_KEY)
+    │
+    └── README.md                 # ← Top-level project guide
 
 ### Module Responsibilities & Dependencies
 
