@@ -103,14 +103,21 @@ Running on public URL: https://abcd1234ef56.gradio.live
 
 ### 7. Quick-start script (copy-paste)
 :: One-time setup
+
 conda create -n cashier_env python=3.9 -y
+
 conda activate cashier_env
+
 pip install -r requirements.txt
+
 conda install -c conda-forge ffmpeg -y
 
 :: Daily usage
+
 conda activate cashier_env
+
 cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
+
 python main.py
 
 ---
