@@ -34,7 +34,10 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 ---
 
 ### 1. Clone the repository
+Type the following command in Anaconda Prompt:
+```bash
 git clone https://github.com/Riiickkk/ici_template.git
+```
 
 ---
 
