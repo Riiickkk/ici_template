@@ -115,8 +115,10 @@ $env:OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ---
 
 ### 6. Run the app
+#### 6-1. Type the following command in Anaconda Prompt to start the server:
+```bash
 python main.py
-
+```
 Successful startup prints e.g.:
 
 Running on local URL: http://127.0.0.1:7860
