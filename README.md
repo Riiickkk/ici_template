@@ -1,19 +1,47 @@
 # Talk-To-Cashier
 
 
-## Project Description
+# Talk-to-Cashier
 
-The project Talk-to-Cashier aims to develop an AI-powered virtual cashier system designed to assist customers in ordering beverages at drink shops. The motivation behind this project stems from four common issues observed in traditional human-operated ordering and cashier processes: excessive workload on cashiers during peak hours, potential hygiene concerns when staff are required to handle both cashiering and drink preparation simultaneously, a high rate of human error, and a heavy dependence on manual labor in existing ordering systems.
+Talk-to-Cashier is an AI-powered virtual cashier system designed to assist customers in ordering beverages at drink shops. By integrating speech recognition, large language models, and Retrieval-Augmented Generation (RAG), our system enables natural conversational ordering, accurate total calculation, and seamless payment processing. This approach reduces labor demands, improves operational efficiency, and delivers a consistent, user-friendly experience.
 
-By integrating speech recognition,  large language models, and Retrieval-Augmented Generation (RAG) technologies, we built an AI cashier system capable of natural conversational interaction. The objective is to enable the AI cashier to receive and process verbal orders through speech recognition, accurately calculate the total amount based on selected items, and facilitate the checkout process via integrated payment functionalities. This approach aims to reduce labor demands, improve operational efficiency, and ensure a smooth and consistent customer experience.
+## Motivation & Goals
+- Address four common issues in traditional cashier systems:
+  - Excessive workload on cashiers during peak hours  
+  - Hygiene concerns when staff handle both cashiering and drink preparation  
+  - High human error rates  
+  - Heavy dependence on manual labor  
+- Streamline ordering, improve efficiency, and ensure a consistent customer experience
 
-Our Talk-To-Cashier system features easy updating of menu and promotional content, along with high adaptability that allows rapid deployment across different store locations. Additionally, the system standardizes the ordering process and automatically records conversations, making interactions feel natural and conversational while maintaining precise information retrieval. Lastly, it supports multiple languages to meet the needs of diverse linguistic environments.
+## Core Technologies
+- **Speech Recognition** to capture verbal orders in real time  
+- **Large Language Models** for natural conversational interaction and intent understanding  
+- **Retrieval-Augmented Generation (RAG)** to fetch precise menu and promotion details from a structured database  
 
-For model training and testing, we selected the beverage brand “De Zheng” (得正) as our data source. The primary reason for choosing this brand lies in its relatively streamlined menu, which facilitates efficient and precise model training within the constraints of our limited resources and technical capacity, while also allowing us to focus on optimizing semantic understanding and menu structuring.
+## Key Features
+- **Natural Conversational Interaction**: Fluid, human-like dialogues with customers  
+- **Automated Order Processing**: Calculates totals and integrates with payment gateways  
+- **Easy Content Updates**: Update menu items and promotions without redeploying code  
+- **High Adaptability**: Rapid deployment across multiple store locations with minimal configuration  
+- **Standardized Ordering & Recording**: Automatically logs every interaction for accuracy and analysis  
+- **Multilingual Support**: Handles orders in different languages for a diverse customer base  
 
-During development, we encountered several challenges, including training and deploying the RAG model in real-time interactive settings, building a structured menu database, and handling response errors caused by inaccuracies in speech recognition. We also placed particular emphasis on interface optimization and designed a voice-based interaction interface to enhance the system’s user-friendliness.
+## Data Source & Model Training
+- Selected the beverage brand **“De Zheng” (得正)** for its streamlined menu, enabling efficient training within resource constraints  
+- Focused on optimizing semantic understanding and menu structuring for precise order handling  
 
-Looking forward, in response to an increasingly globalized society, we aim to expand the system’s multilingual support, incorporate more diverse ordering scenarios (e.g., dine-in vs. takeout options), further enhance the AI's semantic understanding and recommendation capabilities, and explore the feasibility of integration with more chain stores.
+## Development Challenges
+- Real-time training and deployment of the **RAG model** in interactive settings  
+- Building and maintaining a **structured menu database**  
+- Mitigating response errors caused by **speech recognition inaccuracies**  
+- Designing a **voice-based interaction interface** for enhanced user friendliness  
+
+## Future Directions
+- Expand **multilingual support** for a global customer base  
+- Incorporate diverse ordering scenarios (e.g., dine-in vs. takeout)  
+- Further enhance the AI’s **semantic understanding** and **recommendation capabilities**  
+- Explore integration with chain-store systems  
+
 
 ## How to Install and Run the Project
 
