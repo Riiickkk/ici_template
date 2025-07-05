@@ -22,14 +22,19 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 
 ### 0. Prerequisites
 
-| Item                | Get it here                                                     | Notes                                                             |
-|---------------------|-----------------------------------------------------------------|-------------------------------------------------------------------|
-| Miniconda (≈ 60 MB) | <https://docs.anaconda.com/free/miniconda/index.html>           | Install in a **pure-English path** such as `C:\Miniconda3`.       |
-| Git                 | <https://git-scm.com/downloads>                                | For `git clone` (you can also download ZIP manually).             |
-| OpenAI API Key      | <https://platform.openai.com/account/api-keys>                 | Make sure the key is **active** and your account still has credits.|
+Before proceeding, ensure you have the following installed and configured:
 
-> **Why pure-English paths?**  
-> Non-ASCII folders like `桌面` or OneDrive sync paths frequently cause path-encoding or permission errors on Windows.
+| Item                    | Download Link                                                        | Notes                                                                                       |
+|-------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| **Miniconda ≥ 4.12.0**  | `https://docs.anaconda.com/free/miniconda/index.html`                 | • Install into a folder with only ASCII characters (e.g., `C:\Miniconda3`)  
+• Verify installation with `conda --version`                                   |
+| **Git ≥ 2.30.0**        | `https://git-scm.com/downloads`                                       | • Used for `git clone`  
+• Verify installation with `git --version`                                          |
+| **OpenAI API Key**      | `https://platform.openai.com/account/api-keys`                        | • Ensure your key is active and you have enough quota  
+• Store the key securely (never commit to source control)                        |
+
+> **Why ASCII-only paths?**  
+> On Windows, folders with non-ASCII characters (e.g., "Desktop" or OneDrive-synced folders) often cause path-encoding errors or permission issues, preventing the project from running correctly.
 
 ---
 
