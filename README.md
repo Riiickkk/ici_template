@@ -66,6 +66,7 @@ The prompt prefix should now read `(cashier_env)`.
 ---
 
 ### 4. Install dependencies
+Type the following command in Anaconda Prompt:
 ```bash
 pip install -r requirements.txt
 ```
