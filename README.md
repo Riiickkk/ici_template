@@ -140,7 +140,7 @@ conda activate cashier_env
 
 pip install -r requirements.txt
 
-conda install -c conda-forge ffmpeg -y
+conda install -c conda-forge ffmpeg -y (if need)
 
 :: Daily usage
 
