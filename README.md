@@ -67,10 +67,6 @@ The prompt prefix should now read `(cashier_env)`.
 ### 4. Install dependencies
 pip install -r requirements.txt
 
-> **Common pitfall** Forgetting FFmpeg causes  
-> `FileNotFoundError: [WinError 2] The system cannot find the file specified`  
-> when recording audio.
-
 ---
 
 ### 5. Set your OpenAI API key
