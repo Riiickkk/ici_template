@@ -42,7 +42,6 @@ Talk-to-Cashier is an AI-powered virtual cashier system designed to assist custo
 - Further enhance the AI’s **semantic understanding** and **recommendation capabilities**  
 - Explore integration with chain-store systems  
 
----
 
 ## How to Install and Run the Project
 
