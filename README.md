@@ -112,8 +112,6 @@ $env:OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 | **Set temp variable** | `set OPENAI_API_KEY=sk-xxx` | `$env:OPENAI_API_KEY="sk-xxx"` |
 | **Check variable** | `echo %OPENAI_API_KEY%` | `$env:OPENAI_API_KEY` |
 | **Set permanent** | `setx OPENAI_API_KEY "sk-xxx"` | `setx OPENAI_API_KEY "sk-xxx"` |
-```
-
 ---
 
 ### 6. Run the app
