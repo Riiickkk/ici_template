@@ -164,14 +164,6 @@ python main.py
 
 ---
 
-### 9. Safety notes
-
-* **Never** commit your API key to GitHub.  
-* Consider adding `.env` to `.gitignore` if you use dot-env files.  
-* Monitor your [OpenAI usage dashboard](https://platform.openai.com/account/usage) to avoid unexpected charges.
-
----
-
 You’re all set — enjoy talking to your cashier bot! If you hit an unlisted issue, open an **Issue** with:
 
 1. Full terminal error log  
