@@ -34,10 +34,15 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 ---
 
 ### 1. Clone the repository
-Type the following command in Anaconda Prompt:
+Open Anaconda Prompt and run the following command to clone the original project:
 ```bash
 git clone https://github.com/Riiickkk/ici_template.git
 ```
+If you have forked the repository under your own account, replace the URL with your fork’s address, for example:
+```bash
+git clone https://github.com/<your-username>/ici_template.git
+```
+Tip: If you download the ZIP archive instead, extract it into a folder whose path contains only ASCII characters (e.g., C:\Projects\ici_template) to avoid any path-encoding issues.
 
 ---
 
