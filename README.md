@@ -252,10 +252,11 @@ ici_template/
 
 ## Analysis
 
+### Analysis process
 The analysis process of this project was conducted as follows:
 
--Model Performance Evaluation
-  -We tested the accuracy of Whisper’s speech-to-text conversion using multiple audio recordings in different languages (Mandarin Chinese, English, and Korean). The         transcriptions were manually compared against the original text to assess recognition correctness.
+- Model Performance Evaluation
+  - We tested the accuracy of Whisper’s speech-to-text conversion using multiple audio recordings in different languages (Mandarin Chinese, English, and Korean). The         transcriptions were manually compared against the original text to assess recognition correctness.
   -Special attention was paid during testing to analyze whether the model could accurately recognize drink names.
 -Translation and Correction Assessment
   -The raw text produced by Whisper was passed to GPT-4o for correction and subsequently translated into Traditional Chinese. We evaluated the translation accuracy with a focus on domain-specific expressions, such as drink names and flavor adjustments.
