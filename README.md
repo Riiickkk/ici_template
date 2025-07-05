@@ -5,7 +5,7 @@
 
 Talk-to-Cashier is an AI-powered virtual cashier system designed to assist customers in ordering beverages at drink shops. By integrating speech recognition, large language models, and Retrieval-Augmented Generation (RAG), our system enables natural conversational ordering, accurate total calculation, and seamless payment processing. This approach reduces labor demands, improves operational efficiency, and delivers a consistent, user-friendly experience.
 
-### Motivation & Goals
+### Why we develop this project
 - Address four common issues in traditional cashier systems:
   - Excessive workload on cashiers during peak hours  
   - Hygiene concerns when staff handle both cashiering and drink preparation  
