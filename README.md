@@ -45,12 +45,12 @@ Press the Windows key, type **“Anaconda Prompt”**, and hit Enter.
 You should see a black window with the prompt starting with  **`(base)`**.  
 > If you see `C:\>` without `(base)`, you are using the regular CMD. Please close it and reopen Anaconda Prompt.
 
-#### 2-B  Change directory to *notebooks*
+#### 2-2. Change to the project directory
+Type the following command in Anaconda Prompt to change to the correct folder:
 ```bash
 cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
 ```
-> Adjust the path if you cloned the repo elsewhere.  
-> Running `dir` (Windows) or `ls` (macOS/Linux) should list **`main.py`**, **`requirements.txt`**, etc.—then you know you’re in the correct folder.
+> You should see files like main.py, requirements.txt, etc. in this folder.
 
 ---
 
