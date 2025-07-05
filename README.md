@@ -24,14 +24,11 @@ Looking forward, in response to an increasingly globalized society, we aim to ex
 
 Before proceeding, ensure you have the following installed and configured:
 
-| Item                    | Download Link                                                        | Notes                                                                                       |
-|-------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
-| **Miniconda ≥ 4.12.0**  | `https://docs.anaconda.com/free/miniconda/index.html`                 | • Install into a folder with only ASCII characters (e.g., `C:\Miniconda3`)  
-• Verify installation with `conda --version`                                   |
-| **Git ≥ 2.30.0**        | `https://git-scm.com/downloads`                                       | • Used for `git clone`  
-• Verify installation with `git --version`                                          |
-| **OpenAI API Key**      | `https://platform.openai.com/account/api-keys`                        | • Ensure your key is active and you have enough quota  
-• Store the key securely (never commit to source control)                        |
+| Item               | Download Link                                                      | Notes                                                                                |
+|--------------------|--------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| **Miniconda**      | `https://docs.anaconda.com/free/miniconda/index.html`              | • Install into a folder with only ASCII characters (e.g., `C:\Miniconda3`)           |
+| **Git**            | `https://git-scm.com/downloads`                                    | • Used for `git clone`                                                               |
+| **OpenAI API Key** | `https://platform.openai.com/account/api-keys`                     | • Ensure your key is active and you have enough quota<br>• Store the key securely (never commit to source control) |
 
 > **Why ASCII-only paths?**  
 > On Windows, folders with non-ASCII characters (e.g., "Desktop" or OneDrive-synced folders) often cause path-encoding errors or permission issues, preventing the project from running correctly.
