@@ -252,7 +252,27 @@ ici_template/
 
 ## Analysis
 
-[Describe your analysis methods and include any visualizations or graphics that you used to present your findings. Explain the insights that you gained from your analysis and how they relate to your research question or problem statement.]
+The analysis process of this project was conducted as follows:
+
+-Model Performance Evaluation
+  -We tested the accuracy of Whisper’s speech-to-text conversion using multiple audio recordings in different languages (Mandarin Chinese, English, and Korean). The         transcriptions were manually compared against the original text to assess recognition correctness.
+  -Special attention was paid during testing to analyze whether the model could accurately recognize drink names.
+-Translation and Correction Assessment
+  -The raw text produced by Whisper was passed to GPT-4o for correction and subsequently translated into Traditional Chinese. We evaluated the translation accuracy with a focus on domain-specific expressions, such as drink names and flavor adjustments.
+-Retrieval Results Analysis (RAG)
+  -For the queries translated into Traditional Chinese, we examined whether the retrieved content from the menu database correctly corresponded to user inquiries.
+  -We further analyzed the impact of different query phrasing on retrieval quality.
+-Integrated Testing
+  -We conducted end-to-end simulations of multi-turn conversations to observe the overall user experience from voice input to voice output.
+  -Tests were performed under various conditions, including different languages, question lengths, and background noise scenarios.
+  
+Insights
+Based on the above analysis, we derived the following key findings:
+
+-Whisper demonstrates robust multilingual support and achieves high recognition accuracy in quiet environments; however, performance degrades with background noise.
+-Recognition of domain-specific terms, such as drink names, still shows some inaccuracies and requires contextual correction.
+-Combining translation with retrieval-augmented generation (RAG) improves the relevance and precision of the model’s responses.
+-Implementing voice interaction significantly lowers the technical barrier for consumers using this system and effectively reduces the workload of store staff during the ordering process.
 
 ## Results
 
