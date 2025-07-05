@@ -69,25 +69,50 @@ pip install -r requirements.txt
 
 ---
 
-### 5. Set your OpenAI API key
+### 5️. Set your OpenAI API key
 
-#### 5.1 Recommended — set a **permanent** user variable
-
-1. Search *Edit the system environment variables* → click **Environment Variables…**  
-2. Under “User variables” click **New…**  
+#### 5.1. Set a **permanent** user variable (Recommended)
+1. Search **"Edit the system environment variables"** → click **Environment Variables…**  
+2. Under "User variables" click **New…**  
    * **Variable name:** `OPENAI_API_KEY`  
    * **Variable value:** `sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx`  
      *No quotes, no trailing spaces.*
-3. Click **OK** all the way out, then **close and reopen** Anaconda Prompt.
+3. Click **OK** all the way out, then **close and reopen** your terminal.
 
-#### 5.2 Temporary — set for the current terminal only
-```powershell
+#### 5.2. Set for the current terminal only (Temporary)
+
+The syntax depends on which type of Anaconda terminal you're using:
+
+**For Anaconda Prompt (CMD-based) - most common:**
+```
+set OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+**For Anaconda PowerShell Prompt:**
+```
 $env:OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-> **Top 3 mistakes**  
-> 1. wrapping the key in quotes inside the env-var dialog → authentication fails  
-> 2. leaving a space before/after the key → authentication fails  
-> 3. using `set` in PowerShell (that’s CMD syntax) → variable isn’t exported
+
+> **How to identify which you're using:**  
+> - **Anaconda Prompt**: Shows `(base) C:\>` → use `set` command  
+> - **Anaconda PowerShell Prompt**: Shows `(base) PS C:\>` → use `$env:` syntax
+
+#### **Top 3 Common Mistakes**
+
+1. **Wrapping the key in quotes inside the env-var dialog** → authentication fails  
+2. **Leaving a space before/after the key** → authentication fails  
+3. **Using wrong syntax for your shell type:**
+   - Using `set` in PowerShell → variable isn't exported  
+   - Using `$env:` in CMD → command not recognized
+
+#### **Command Syntax Reference**
+
+| Task | CMD (Anaconda Prompt) | PowerShell (Anaconda PowerShell Prompt) |
+|------|----------------------|------------------------------------------|
+| **Set temp variable** | `set OPENAI_API_KEY=sk-xxx` | `$env:OPENAI_API_KEY="sk-xxx"` |
+| **Check variable** | `echo %OPENAI_API_KEY%` | `$env:OPENAI_API_KEY` |
+| **Set permanent** | `setx OPENAI_API_KEY "sk-xxx"` | `setx OPENAI_API_KEY "sk-xxx"` |
+```
 
 ---
 
