@@ -1,6 +1,5 @@
-# Project Title
+# Talk-To-Cashier
 
-Talk-To-Cashier
 
 ## Project Description
 
