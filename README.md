@@ -1,11 +1,11 @@
 # Talk-To-Cashier
 
 
-# Talk-to-Cashier
+## Project Description
 
 Talk-to-Cashier is an AI-powered virtual cashier system designed to assist customers in ordering beverages at drink shops. By integrating speech recognition, large language models, and Retrieval-Augmented Generation (RAG), our system enables natural conversational ordering, accurate total calculation, and seamless payment processing. This approach reduces labor demands, improves operational efficiency, and delivers a consistent, user-friendly experience.
 
-## Motivation & Goals
+### Motivation & Goals
 - Address four common issues in traditional cashier systems:
   - Excessive workload on cashiers during peak hours  
   - Hygiene concerns when staff handle both cashiering and drink preparation  
@@ -13,12 +13,12 @@ Talk-to-Cashier is an AI-powered virtual cashier system designed to assist custo
   - Heavy dependence on manual labor  
 - Streamline ordering, improve efficiency, and ensure a consistent customer experience
 
-## Core Technologies
+### Core Technologies
 - **Speech Recognition** to capture verbal orders in real time  
 - **Large Language Models** for natural conversational interaction and intent understanding  
 - **Retrieval-Augmented Generation (RAG)** to fetch precise menu and promotion details from a structured database  
 
-## Key Features
+### Key Features
 - **Natural Conversational Interaction**: Fluid, human-like dialogues with customers  
 - **Automated Order Processing**: Calculates totals and integrates with payment gateways  
 - **Easy Content Updates**: Update menu items and promotions without redeploying code  
@@ -26,17 +26,17 @@ Talk-to-Cashier is an AI-powered virtual cashier system designed to assist custo
 - **Standardized Ordering & Recording**: Automatically logs every interaction for accuracy and analysis  
 - **Multilingual Support**: Handles orders in different languages for a diverse customer base  
 
-## Data Source & Model Training
+### Data Source & Model Training
 - Selected the beverage brand **“De Zheng” (得正)** for its streamlined menu, enabling efficient training within resource constraints  
 - Focused on optimizing semantic understanding and menu structuring for precise order handling  
 
-## Development Challenges
+### Development Challenges
 - Real-time training and deployment of the **RAG model** in interactive settings  
 - Building and maintaining a **structured menu database**  
 - Mitigating response errors caused by **speech recognition inaccuracies**  
 - Designing a **voice-based interaction interface** for enhanced user friendliness  
 
-## Future Directions
+### Future Directions
 - Expand **multilingual support** for a global customer base  
 - Incorporate diverse ordering scenarios (e.g., dine-in vs. takeout)  
 - Further enhance the AI’s **semantic understanding** and **recommendation capabilities**  
