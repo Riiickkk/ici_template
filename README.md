@@ -55,18 +55,20 @@ cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
 ---
 
 ### 3. Create + activate the Conda environment
-
+Type the following command in Anaconda Prompt:
+```bash
 conda create -n cashier_env python=3.9 -y
 
 conda activate cashier_env
-
+```
 The prompt prefix should now read `(cashier_env)`.
 
 ---
 
 ### 4. Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 ---
 
 ### 5️. Set your OpenAI API key
