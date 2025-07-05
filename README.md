@@ -38,12 +38,12 @@ git clone https://github.com/Riiickkk/ici_template.git
 
 ---
 
-### 2️. Open Anaconda Prompt and change to the project folder
+### 2️. Open Anaconda Prompt
 
-#### 2-A  Launch Anaconda Prompt  
-1. Press the Windows key and type **“Anaconda Prompt”**, then hit Enter.  
-2. A black window opens and the prompt should start with **`(base)`**.  
-   *If you only see `C:\>` without `(base)`, you are in the regular CMD – close it and open Anaconda Prompt again.*
+#### 2-1. Launch Anaconda Prompt
+Press the Windows key, type **“Anaconda Prompt”**, and hit Enter. 
+You should see a black window with the prompt starting with  **`(base)`**.  
+> If you see `C:\>` without `(base)`, you are using the regular CMD. Please close it and reopen Anaconda Prompt.
 
 #### 2-B  Change directory to *notebooks*
 ```bash
