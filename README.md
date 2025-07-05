@@ -46,7 +46,7 @@ git clone https://github.com/Riiickkk/ici_template.git
    *If you only see `C:\>` without `(base)`, you are in the regular CMD – close it and open Anaconda Prompt again.*
 
 #### 2-B  Change directory to *notebooks*
-```bash
+```
 cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
 
 
