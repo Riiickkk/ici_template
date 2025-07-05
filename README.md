@@ -9,7 +9,7 @@ By integrating speech recognition,  large language models, and Retrieval-Augment
 
 For model training and testing, we selected the beverage brand “De Zheng” (得正) as our data source. The primary reason for choosing this brand lies in its relatively streamlined menu, which facilitates efficient and precise model training within the constraints of our limited resources and technical capacity, while also allowing us to focus on optimizing semantic understanding and menu structuring.
 
-During development, we encountered several challenges, including training and deploying the RAG model in real-time interactive settings, building a structured menu database, and addressing information loss due to errors in speech recognition. We also placed particular emphasis on interface optimization and designed a voice-based interaction interface to enhance the system’s user-friendliness.
+During development, we encountered several challenges, including training and deploying the RAG model in real-time interactive settings, building a structured menu database, and handling response errors caused by inaccuracies in speech recognition. We also placed particular emphasis on interface optimization and designed a voice-based interaction interface to enhance the system’s user-friendliness.
 
 Looking forward, in response to an increasingly globalized society, we aim to expand the system’s multilingual support, incorporate more diverse ordering scenarios (e.g., dine-in vs. takeout options), further enhance the AI's semantic understanding and recommendation capabilities, and explore the feasibility of integration with more chain stores.
 
