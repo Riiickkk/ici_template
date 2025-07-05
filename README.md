@@ -38,7 +38,7 @@ git clone https://github.com/Riiickkk/ici_template.git
 
 ---
 
-### 2️. Open Anaconda Prompt → change to the project folder
+### 2️. Open Anaconda Prompt and change to the project folder
 
 #### 2-A  Launch Anaconda Prompt  
 1. Press the Windows key and type **“Anaconda Prompt”**, then hit Enter.  
