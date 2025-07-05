@@ -43,6 +43,7 @@ Talk-to-Cashier is an AI-powered virtual cashier system designed to assist custo
 - Explore integration with chain-store systems  
 
 
+
 ## How to Install and Run the Project
 
 > The following instructions target **Windows 10/11 + Miniconda** because that is where most user mistakes occur.  
