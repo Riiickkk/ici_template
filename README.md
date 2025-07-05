@@ -38,10 +38,17 @@ git clone https://github.com/Riiickkk/ici_template.git
 
 ---
 
-### 2. Open *Anaconda Prompt* and enter the correct sub-directory
+### 2️. Open Anaconda Prompt → change to the project folder
+
+#### 2-A  Launch Anaconda Prompt  
+1. Press the Windows key and type **“Anaconda Prompt”**, then hit Enter.  
+2. A black window opens and the prompt should start with **`(base)`**.  
+   *If you only see `C:\>` without `(base)`, you are in the regular CMD – close it and open Anaconda Prompt again.*
+
+#### 2-B  Change directory to *notebooks*
+```bash
 cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
 
-You should see `main.py`, `requirements.txt`, etc. in this folder.
 
 ---
 
