@@ -81,10 +81,11 @@ pip install -r requirements.txt
 3. Click **OK** all the way out, then **close and reopen** Anaconda Prompt.
 
 #### 5.2 Temporary — set for the current terminal only
+```powershell
 $env:OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-
+```
 > **Top 3 mistakes**  
-> 1. wrapping the key in quotes *inside* the env-var dialog → authentication fails  
+> 1. wrapping the key in quotes inside the env-var dialog → authentication fails  
 > 2. leaving a space before/after the key → authentication fails  
 > 3. using `set` in PowerShell (that’s CMD syntax) → variable isn’t exported
 
