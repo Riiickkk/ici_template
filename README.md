@@ -49,6 +49,9 @@ git clone https://github.com/Riiickkk/ici_template.git
 ```bash
 cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
 ```
+> Adjust the path if you cloned the repo elsewhere.  
+> Running `dir` (Windows) or `ls` (macOS/Linux) should list **`main.py`**, **`requirements.txt`**, etc.—then you know you’re in the correct folder.
+
 ---
 
 ### 3. Create + activate the Conda environment
