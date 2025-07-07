@@ -275,9 +275,22 @@ Based on the above analysis, we derived the following key findings:
 - Combining translation with retrieval-augmented generation (RAG) improves the relevance and precision of the model’s responses.
 - Implementing voice interaction significantly lowers the technical barrier for consumers using this system and effectively reduces the workload of store staff during the ordering process.
 
-## Results
+## Results (demonstrated in Chinese)
 
 ![Model Output](order.jpg)
+
+### Ordering Process
+- First: asking for information of recent events
+
+  The AI cashier will give the customers detail information of recent events of the shop.
+  
+- Second: ordering beverages
+  
+  The AI cashier will analysis the customers' oral orders, search for the target on the menu, and automatically calculate the money of the order. The customers can also change their orders to other beverages on the menu, the AI cashier will go through the same process again and continue the order. If customers add other drinks into the order, or the want to pay extra money for the events, the AI cashier will calculate the total amount of price in the next step.
+
+- Third: calculate total price
+
+  
 
 
 ## Include Credits
