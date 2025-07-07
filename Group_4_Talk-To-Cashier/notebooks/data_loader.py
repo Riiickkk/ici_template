@@ -42,8 +42,8 @@ def load_and_vectorize_documents():
     print('完成向量化')
 
     retriever = vector_store.as_retriever(
-        search_type="mmr",
-        search_kwargs={"k": 3, "lambda_mult": 0.3}
+        search_type="similarity",
+        search_kwargs={"k": 3}
     )
     return vector_store, retriever
 
