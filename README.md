@@ -278,6 +278,7 @@ Based on the above analysis, we derived the following key findings:
 ## Results (demonstrated in Chinese)
 
 ![Model Output](order.jpg)
+![Model Output](order1.jpg)
 
 ### Ordering Process
 - First: asking for information of recent events
@@ -286,12 +287,7 @@ Based on the above analysis, we derived the following key findings:
   
 - Second: ordering beverages
   
-  The AI cashier will analysis the customers' oral orders, search for the target on the menu, and automatically calculate the money of the order. The customers can also change their orders to other beverages on the menu, the AI cashier will go through the same process again and continue the order. If customers add other drinks into the order, or the want to pay extra money for the events, the AI cashier will calculate the total amount of price in the next step.
-
-- Third: calculate total price
-
-  
-
+  The AI cashier will analysis the customers' oral orders, search for the target on the menu, ask for the sweet level and ice, and automatically calculate the price of the item. The customers can also change their orders to other beverages on the menu (demonstrated in the bottom of picture 1), or adding new items into the order (demonstrated in picture 2), the AI cashier will go through the same process again. If the customers want to end the ordering process, they just need to ask: "What's the total?" And the AI cashier will calculate the total amount of price and stop receive orders. Finally, the AI cashier will ask the customers if they bring reusable cups with them for a 5-dollar discount.
 
 ## Include Credits
 This project was collaboratively completed by the following team members. We sincerely appreciate everyone’s dedication and contribution:
