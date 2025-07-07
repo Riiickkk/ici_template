@@ -11,7 +11,7 @@ class AudioService:
     def __init__(self):
         # 載入 Whisper 模型
         # 警告: FP16 is not supported on CPU; using FP32 instead 是正常的，表示在 CPU 上會使用 FP32
-        self.whisper_model = whisper.load_model("base")
+        self.whisper_model = whisper.load_model("small")
         self.supported_tts_langs = tts_langs() # gTTS 支援的語言列表
         self._initialize_welcome_audio()
 
