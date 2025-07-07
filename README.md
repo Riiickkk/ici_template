@@ -1,34 +1,284 @@
-# Project Title
+# Talk-To-Cashier
 
-Talk-To-Cashier
 
 ## Project Description
 
-The project Talk-to-Cashier aims to develop an AI-powered virtual cashier system designed to assist customers in ordering beverages at drink shops. The motivation behind this project stems from four common issues observed in traditional human-operated ordering and cashier processes: excessive workload on cashiers during peak hours, potential hygiene concerns when staff are required to handle both cashiering and drink preparation simultaneously, a high rate of human error, and a heavy dependence on manual labor in existing ordering systems.
+Talk-to-Cashier is an AI-powered virtual cashier system designed to assist customers in ordering beverages at drink shops. By integrating speech recognition, large language models, and Retrieval-Augmented Generation (RAG), our system enables natural conversational ordering, accurate total calculation, and seamless payment processing. This approach reduces labor demands, improves operational efficiency, and delivers a consistent, user-friendly experience.
 
-By integrating speech recognition, natural language processing, and Retrieval-Augmented Generation (RAG) technologies, we built an AI cashier system capable of natural conversational interaction. The objective is to enable the AI cashier to receive and process verbal orders through speech recognition, accurately calculate the total amount based on selected items, and facilitate the checkout process via integrated payment functionalities. This approach aims to reduce labor demands, improve operational efficiency, and ensure a smooth and consistent customer experience.
+### Why we develop this project
+- Address four common issues in traditional cashier systems:
+  - Excessive workload on cashiers during peak hours  
+  - Hygiene concerns when staff handle both cashiering and drink preparation  
+  - High human error rates  
+  - Heavy dependence on manual labor  
+- Streamline ordering, improve efficiency, and ensure a consistent customer experience
 
-For model training and testing, we selected the beverage brand “De Zheng” (得正) as our data source. The primary reason for choosing this brand lies in its relatively streamlined menu, which facilitates efficient and precise model training within the constraints of our limited resources and technical capacity, while also allowing us to focus on optimizing semantic understanding and menu structuring.
+### Core Technologies
+- **Speech Recognition** to capture verbal orders in real time  
+- **Large Language Models** for natural conversational interaction and intent understanding  
+- **Retrieval-Augmented Generation (RAG)** to fetch precise menu and promotion details from a structured database  
 
-During development, we encountered several challenges, including training and deploying the RAG model in real-time interactive settings, building a structured menu database, and addressing information loss due to errors in speech recognition. We also placed particular emphasis on interface optimization and designed a voice-based interaction interface to enhance the system’s user-friendliness.
+### Key Features
+- **Natural Conversational Interaction**: Fluid, human-like dialogues with customers  
+- **Automated Order Processing**: Calculates totals and integrates with payment gateways  
+- **Easy Content Updates**: Update menu items and promotions without redeploying code  
+- **High Adaptability**: Rapid deployment across multiple store locations with minimal configuration  
+- **Standardized Ordering & Recording**: Automatically logs every interaction for accuracy and analysis  
+- **Multilingual Support**: Handles orders in different languages for a diverse customer base  
 
-Looking forward, in response to an increasingly globalized society, we aim to expand the system’s multilingual support, incorporate more diverse ordering scenarios (e.g., dine-in vs. takeout options), further enhance the AI's semantic understanding and recommendation capabilities, and explore the feasibility of integration with more chain stores.
+### Data Source & Model Training
+- Selected the beverage brand **“De Zheng” (得正)** for its streamlined menu, enabling efficient training within resource constraints  
+- Focused on optimizing semantic understanding and menu structuring for precise order handling  
+
+### Development Challenges
+- Real-time training and deployment of the **RAG model** in interactive settings  
+- Building and maintaining a **structured menu database**  
+- Mitigating response errors caused by **speech recognition inaccuracies**  
+- Designing a **voice-based interaction interface** for enhanced user friendliness  
+
+### Future Directions
+- Expand **multilingual support** for a global customer base  
+- Incorporate diverse ordering scenarios (e.g., dine-in vs. takeout)  
+- Further enhance the AI’s **semantic understanding** and **recommendation capabilities**  
+- Explore integration with chain-store systems  
+
+---
 
 ## How to Install and Run the Project
 
-[Provide instructions on how to get started with your project, including any necessary software or data. Include installation instructions and any prerequisites or dependencies that are required.]
+> The following instructions target **Windows 10/11 + Miniconda** because that is where most user mistakes occur.  
+> macOS / Linux users can follow the **same steps**—just replace the installer, paths, and shell syntax that differ on your platform.
+
+---
+
+### 0. Prerequisites
+
+Before proceeding, ensure you have the following installed and configured:
+
+| Item               | Download Link                                                      | Notes                                                                                |
+|--------------------|--------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| **Miniconda**      | `https://docs.anaconda.com/free/miniconda/index.html`              | • Install into a folder with only ASCII characters (e.g., `C:\Miniconda3`)           |
+| **Git**            | `https://git-scm.com/downloads`                                    | • Used for `git clone`                                                               |
+| **OpenAI API Key** | `https://platform.openai.com/account/api-keys`                     | • Ensure your key is active and you have enough quota<br>• Store the key securely (never commit to source control) |
+
+> **Why ASCII-only paths?**  
+> On Windows, folders with non-ASCII characters (e.g., "Desktop" or OneDrive-synced folders) often cause path-encoding errors or permission issues, preventing the project from running correctly.
+
+---
+
+### 1. Clone the repository
+Open Anaconda Prompt and run the following command to clone the original project:
+```bash
+git clone https://github.com/Riiickkk/ici_template.git
+```
+If you have forked the repository under your own account, replace the URL with your fork’s address, for example:
+```bash
+git clone https://github.com/<your-username>/ici_template.git
+```
+Tip: If you download the ZIP archive instead, extract it into a folder whose path contains only ASCII characters (e.g., C:\Projects\ici_template) to avoid any path-encoding issues.
+
+---
+
+### 2️. Open Anaconda Prompt
+
+#### 2-1. Launch Anaconda Prompt
+Press the Windows key, type **“Anaconda Prompt”**, and hit Enter. 
+You should see a black window with the prompt starting with  **`(base)`**.  
+> If you see `C:\>` without `(base)`, you are using the regular CMD. Please close it and reopen Anaconda Prompt.
+
+#### 2-2. Change to the project directory
+Type the following command in Anaconda Prompt to change to the correct folder:
+```bash
+cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
+```
+> You should see files like main.py, requirements.txt, etc. in this folder.
+
+---
+
+### 3. Create + activate the Conda environment
+Type the following command in Anaconda Prompt:
+```bash
+conda create -n cashier_env python=3.9 -y
+
+conda activate cashier_env
+```
+The prompt prefix should now read `(cashier_env)`.
+
+---
+
+### 4. Install dependencies
+Type the following command in Anaconda Prompt:
+```bash
+pip install -r requirements.txt
+```
+---
+
+### 5️. Set your OpenAI API key
+
+#### 5.1. Set a **permanent** user variable (Recommended)
+1. Search **"Edit the system environment variables"** → click **Environment Variables…**  
+2. Under "User variables" click **New…**  
+   * **Variable name:** `OPENAI_API_KEY`  
+   * **Variable value:** `sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx`  
+     *No quotes, no trailing spaces.*
+3. Click **OK** all the way out, then **close and reopen** your terminal.
+
+#### 5.2. Set for the current terminal only (Temporary)
+
+The syntax depends on which type of Anaconda terminal you're using:
+
+**For Anaconda Prompt (CMD-based) - most common:**
+```
+set OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+**For Anaconda PowerShell Prompt:**
+```
+$env:OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
+> **How to identify which you're using:**  
+> - **Anaconda Prompt**: Shows `(base) C:\>` → use `set` command  
+> - **Anaconda PowerShell Prompt**: Shows `(base) PS C:\>` → use `$env:` syntax
+
+#### **Top 3 Common Mistakes**
+
+1. **Wrapping the key in quotes inside the env-var dialog** → authentication fails  
+2. **Leaving a space before/after the key** → authentication fails  
+3. **Using wrong syntax for your shell type:**
+   - Using `set` in PowerShell → variable isn't exported  
+   - Using `$env:` in CMD → command not recognized
+
+#### **Command Syntax Reference**
+
+| Task | CMD (Anaconda Prompt) | PowerShell (Anaconda PowerShell Prompt) |
+|------|----------------------|------------------------------------------|
+| **Set temp variable** | `set OPENAI_API_KEY=sk-xxx` | `$env:OPENAI_API_KEY="sk-xxx"` |
+| **Check variable** | `echo %OPENAI_API_KEY%` | `$env:OPENAI_API_KEY` |
+| **Set permanent** | `setx OPENAI_API_KEY "sk-xxx"` | `setx OPENAI_API_KEY "sk-xxx"` |
+---
+
+### 6. Run the app
+#### 6-1. Type the following command in Anaconda Prompt to start the server:
+```bash
+python main.py
+```
+Successful startup prints e.g.:
+
+Running on local URL: http://127.0.0.1:7860
+
+Running on public URL: https://abcd1234ef56.gradio.live
+
+1. Open **http://127.0.0.1:7860** in your browser.  
+2. **Keep** the Anaconda Prompt window open – it’s your server.  
+3. The public URL is for quick external demos (expires in ~72 h).
+
+---
+
+### 7. Quick-start script (copy-paste)
+:: One-time setup
+
+conda create -n cashier_env python=3.9 -y
+
+conda activate cashier_env
+
+pip install -r requirements.txt
+
+conda install -c conda-forge ffmpeg -y (if need)
+
+:: Daily usage
+
+conda activate cashier_env
+
+cd C:\Projects\ici_template\Group_4_Talk-To-Cashier\notebooks
+
+python main.py
+
+---
+
+### 8. Troubleshooting Table
+
+| Message / Symptom                                            | Likely Cause                                    | Fix |
+|--------------------------------------------------------------|-------------------------------------------------|-----|
+| `The api_key client option must be set…`                     | `OPENAI_API_KEY` missing / misspelled           | Re-set env-var, restart terminal |
+| `FileNotFoundError: [WinError 2]` when recording             | FFmpeg not installed / not in PATH              | `conda install -c conda-forge ffmpeg -y` |
+| `OMP: Error #15: Initializing libiomp5md.dll…`               | Intel OpenMP DLL conflict                       | `setx KMP_DUPLICATE_LIB_OK True` or set in code |
+| Gradio shows **Connection errored out.** after recording     | Old Gradio / gradio_client bug                  | `pip install -U gradio gradio_client` |
+| Using `set OPENAI_API_KEY=` in PowerShell has no effect      | CMD syntax in PowerShell                        | Use `$env:OPENAI_API_KEY="..."` |
+
+---
+
+You’re all set — enjoy talking to your cashier bot! If you hit an unlisted issue, open an **Issue** with:
+
+1. Full terminal error log  
+2. OS + Python + Conda versions  
+3. Exact steps to reproduce
 
 ## File Structure
 
-[Describe the file structure of your project, including how the files are organized and what each file contains. Be sure to explain the purpose of each file and how they are related to one another.]
+> A concise overview of the key folders and files used at runtime.  
+> Generic items such as `.gitignore`, licence files, and screenshots are omitted for clarity.
+
+```
+ici_template/
+└── Group_4_Talk-To-Cashier/
+    ├── data/                     # ← Knowledge base (structured + docs)
+    │   ├── cashier.csv           #   SOP / FAQ for cashiers
+    │   └── menu.pdf              #   Restaurant menu used for Q&A
+    │
+    ├── notebooks/                # ← All source code lives here
+    │   ├── main.py               # Entry point; launches Gradio UI
+    │   ├── audio_service.py      # Records mic, calls Whisper STT
+    │   ├── llm_service.py        # Packs user text + context, calls OpenAI Chat API
+    │   ├── vector_db_service.py  # Builds / queries ChromaDB
+    │   ├── requirements.txt      # Python dependency list (pip install -r)
+    │   └── .env.example          # Sample env-var file (copy → .env, add OPENAI_API_KEY)
+    │
+    └── README.md                 # ← Top-level project guide
+```
+
+### Module Responsibilities & Dependencies
+
+| File / Dir                  | Purpose                                                                                     | Consumed / Called by            |
+|-----------------------------|---------------------------------------------------------------------------------------------|---------------------------------|
+| **`main.py`**              | 1️. Load vector DB&nbsp;·&nbsp;2️. Start Gradio UI&nbsp;·&nbsp;3️. Orchestrate the three services | imports the `*_service.py` files|
+| **`audio_service.py`**     | Record microphone audio → `ffmpeg` → Whisper speech-to-text                                  | Returns text to `llm_service.py`|
+| **`vector_db_service.py`** | Read **data/** → split → embed → store vectors; provides semantic search                     | Called by `llm_service.py`      |
+| **`llm_service.py`**       | Combine *question + context* → OpenAI Chat API → return answer                               | Called by `main.py`             |
+| **`data/`**                | Holds the `.csv` / `.pdf` knowledge-base files                                               | Loaded at startup               |
+| **`requirements.txt`**     | Python dependency list (`pip install -r`)                                                    | —                               |
+| **`.env.example`** | Example env-var file; copy to `.env` or set as system environment variable | — |
+
 
 ## Analysis
 
-[Describe your analysis methods and include any visualizations or graphics that you used to present your findings. Explain the insights that you gained from your analysis and how they relate to your research question or problem statement.]
+### Analysis process
+The analysis process of this project was conducted as follows:
+
+- Model Performance Evaluation
+  - We tested the accuracy of Whisper’s speech-to-text conversion using multiple audio recordings in different languages (Mandarin Chinese, English, and Korean). The         transcriptions were manually compared against the original text to assess recognition correctness.
+  - Special attention was paid during testing to analyze whether the model could accurately recognize drink names.
+- Translation and Correction Assessment
+  - The raw text produced by Whisper was passed to GPT-4o for correction and subsequently translated into Traditional Chinese. We evaluated the translation accuracy with a focus on domain-specific expressions, such as drink names and flavor adjustments.
+- Retrieval Results Analysis (RAG)
+  - For the queries translated into Traditional Chinese, we examined whether the retrieved content from the menu database correctly corresponded to user inquiries.
+  - We further analyzed the impact of different query phrasing on retrieval quality.
+- Integrated Testing
+  - We conducted end-to-end simulations of multi-turn conversations to observe the overall user experience from voice input to voice output.
+  - Tests were performed under various conditions, including different languages, question lengths, and background noise scenarios.
+  
+### Insights
+Based on the above analysis, we derived the following key findings:
+
+- Whisper demonstrates robust multilingual support and achieves high recognition accuracy in quiet environments; however, performance degrades with background noise.
+- Recognition of domain-specific terms, such as drink names, still shows some inaccuracies and requires contextual correction.
+- Combining translation with retrieval-augmented generation (RAG) improves the relevance and precision of the model’s responses.
+- Implementing voice interaction significantly lowers the technical barrier for consumers using this system and effectively reduces the workload of store staff during the ordering process.
 
 ## Results
 
-[Provide a summary of your findings and conclusions, including any recommendations or implications for future research. Be sure to explain how your results address your research question or problem statement.]
+![Model Output](order.jpg)
+
 
 ## Include Credits
 This project was collaboratively completed by the following team members. We sincerely appreciate everyone’s dedication and contribution:
