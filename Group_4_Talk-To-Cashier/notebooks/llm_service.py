@@ -25,7 +25,7 @@ class LLMService:
         原始語言：{source_lang}
         文本："{text}"
 
-        請只輸出翻譯後的繁體中文文本，不要有任何額外的解釋或贅述。
+        請只輸出翻譯後的繁體中文文本，不要有任何額外的解釋或贅述，同時確保語意在不同語言中仍是一致的。
         """
         try:
             response = self.client.chat.completions.create(
@@ -38,7 +38,7 @@ class LLMService:
                 max_tokens=200
             )
             translated_text = response.choices[0].message.content.strip()
-            print(f"DEBUG (LLMService): Translated '{text}' from {source_lang} to Chinese: '{translated_text}'")
+            print(f"DEBUG (LLMService): Translated '{text}' from {source_lang} to zh-TW: '{translated_text}'")
             return translated_text
         except Exception as e:
             print(f"⚠️ 翻譯錯誤：{e}")
@@ -74,9 +74,23 @@ class LLMService:
         )
         return correction_response.choices[0].message.content.strip()
 
-    def get_llm_response(self, corrected_text, conversation_history, rag_context):
+    # 修改 get_llm_response 函數簽名和 system_prompt 格式化
+    def get_llm_response(self, corrected_text, conversation_history, rag_context, output_lang): # <-- 新增 output_lang 參數
         """根據校正後的文字和對話歷史獲取 LLM 的回覆。"""
-        system_prompt = SYSTEM_PROMPT_TEMPLATE.format(rag_context=rag_context)
+        # 根據 output_lang 準備更明確的語言指令
+        lang_instruction_map = {
+            "en": "英文", "zh-tw": "繁體中文", "zh": "繁體中文", "zh-cn": "繁體中文",
+            "ja": "日文", "ko": "韓文", "es": "西班牙文", "fr": "法文",
+            "de": "德文", "it": "義大利文", "pt": "葡萄牙文", "ru": "俄文",
+            "hi": "印地語", "id": "印尼文", "th": "泰文", "vi": "越南文",
+            "tr": "土耳其文", "pl": "波蘭文", "nl": "荷蘭文", "sv": "瑞典文",
+            "ar": "阿拉伯文"
+        }
+        # 如果 output_lang 不在映射中，則默認顯示其代碼
+        display_lang = lang_instruction_map.get(output_lang.lower(), output_lang)
+
+        # 格式化系統提示，現在包含 output_lang_instruction
+        system_prompt = SYSTEM_PROMPT_TEMPLATE.format(rag_context=rag_context, output_lang_instruction=display_lang) # <-- 新增 output_lang_instruction
         messages = [{"role": "system", "content": system_prompt}]
 
         for q, a in conversation_history[-100:]: # 限制歷史記錄
