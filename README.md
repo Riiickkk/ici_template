@@ -277,7 +277,8 @@ Based on the above analysis, we derived the following key findings:
 
 ## Results
 
-[Provide a summary of your findings and conclusions, including any recommendations or implications for future research. Be sure to explain how your results address your research question or problem statement.]
+![Model Output](order.jpg)
+
 
 ## Include Credits
 This project was collaboratively completed by the following team members. We sincerely appreciate everyone’s dedication and contribution:
