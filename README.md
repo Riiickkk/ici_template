@@ -275,21 +275,28 @@ Based on the above analysis, we derived the following key findings:
 - Combining translation with retrieval-augmented generation (RAG) improves the relevance and precision of the model’s responses.
 - Implementing voice interaction significantly lowers the technical barrier for consumers using this system and effectively reduces the workload of store staff during the ordering process.
 
-## Results (demonstrated in Chinese)
+## Results
 
 ![Model Output](Group_4_Talk-To-Cashier/notebooks/order.jpg)
-![Model Output](Group_4_Talk-To-Cashier/notebooks/order1.jpg)
+picture 1
 
-### Ordering Process
+![Model Output](Group_4_Talk-To-Cashier/notebooks/order1.jpg)
+picture 2
+
+### Example Ordering Process
 - First: asking for information of recent events
 
   The AI cashier will give the customers detail information of recent events of the shop.
   
 - Second: ordering beverages
   
-  The AI cashier will analysis the customers' oral orders, search for the target on the menu, ask for the sweet level and ice, and automatically calculate the price of the item. The customers can also change their orders to other beverages on the menu (demonstrated in the bottom of picture 1), or adding new items into the order (demonstrated in picture 2), the AI cashier will go through the same process again. If the customers want to end the ordering process, they just need to ask: "What's the total?" And the AI cashier will calculate the total amount of price and stop receive orders. Finally, the AI cashier will ask the customers if they bring reusable cups with them for a 5-dollar discount.
+  The AI cashier will analysis the customers' oral orders, search for the target on the menu, ask for the sweet level and ice, and automatically calculate the price of the item. The customers can also change their orders to other beverages on the menu (demonstrated in the bottom of picture 1), or adding new items into the order (demonstrated in picture 2), the AI cashier will go through the same process again. If the customers want to end the ordering process, they just need to ask: "What's the total?" And the AI cashier will calculate the total amount of price and stop receive orders. Finally, the AI cashier will ask the customers if they bring reusable cups with them for a 5NTD discount.
 
 ![Model Output](Group_4_Talk-To-Cashier/notebooks/orderF.jpg)
+picture 3
+
+### Multilingual Support
+- The AI cashier can support different foreign languages. Picture 3 shows example of ordering drinks in French, and the previous two pictures are Chinese examples.
 
 ## Include Credits
 This project was collaboratively completed by the following team members. We sincerely appreciate everyone’s dedication and contribution:
