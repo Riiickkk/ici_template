@@ -313,6 +313,23 @@ AIGC and ChatGPT’s Advanced Application: Fine-tune,
 AIGC and ChatGPT’s Advanced Application: RAG.
 These resources significantly deepened our understanding of generative AI, including model fine-tuning and retrieval-augmented generation (RAG), and contributed greatly to the realization of this project.
 
+## Contributors
+
+| Responsibility                                  | Member Name         |
+|-------------------------------------------------|---------------------|
+| Programmer                                      | Kevin, Rick         |
+| README Writing - Project Description            | Leo, Chloe          |
+| README Writing - How to Install and Run         | Kevin, Rick         |
+| README Writing - File Structure                 | Kevin, Rick         |
+| README Writing - Analysis                       | Chloe               |
+| README Writing - Results                        | Leo                 |
+| README Writing - Include Credits                | Chloe               |
+| README Writing - Contributions                  | Chloe               |
+| README Writing - Add a License                  | Chloe, Robert       |
+| README Writing - References                     | Robert              |
+| Data Pre-processing                             | Leo, Chloe, Robert  |
+
+
 ## Add a License
 MIT License
 
